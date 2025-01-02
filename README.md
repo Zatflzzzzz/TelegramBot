@@ -55,13 +55,13 @@ Before you can run the bot, ensure you have the following:
 
 ### 3. Configure the Application
 
-To run the bot, you need to provide the following fields in the application.properties file (or pass them as environment variables):
-properties
-
-bot.name=YourBotUsernameHere
-bot.token=YourTelegramBotTokenHere
-
-Replace YourBotUsernameHere and YourTelegramBotTokenHere with the actual values for your bot.
+    To run the bot, you need to provide the following fields in the application.properties file (or pass them as environment variables):
+    properties
+    
+    bot.name=YourBotUsernameHere
+    bot.token=YourTelegramBotTokenHere
+    
+    Replace YourBotUsernameHere and YourTelegramBotTokenHere with the actual values for your bot.
 
 ### 4. Build and Run the Project
 
@@ -70,10 +70,11 @@ Use the following steps to build and run the application:
     Build the project:
     bash
 
-./mvnw clean package
+    ./mvnw clean package
 
 Run the application:
-bash
+
+    bash
 
     java -jar target/<your-jar-file>.jar
 
