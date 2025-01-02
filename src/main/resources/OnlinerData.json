@@ -1,0 +1,146 @@
+{
+  "catalog": [
+    {
+      "name": "Electronics",
+      "categories": [
+        {
+          "name": "Mobile Phones and Accessories",
+          "sub-categories": [
+            {
+              "name": "Smartphones",
+              "request_link_query": "mobile"
+            },
+            {
+              "name": "Gaming Mobile Phones",
+              "request_link_query": "mobile?m_mem_share[from]=12gb"
+            },
+            {
+              "name": "Headphones",
+              "request_link_query": "headphones"
+            },
+            {
+              "name": "Fitness Bracelets",
+              "request_link_query": "smartwatch?sw_type[0]=bracelet"
+            },
+            {
+              "name": "Kids' Smartwatches",
+              "request_link_query": "smartwatch?sw_type[0]=kidssmartwatch"
+            },
+            {
+              "name": "Portable Chargers",
+              "request_link_query": "portablecharger"
+            },
+            {
+              "name": "Smartwatches",
+              "request_link_query": "smartwatch"
+            }
+          ]
+        },
+        {
+          "name": "Gadgets",
+          "sub-categories": [
+            {
+              "name": "Smartwatches",
+              "request_link_query": "smartwatch"
+            },
+            {
+              "name": "Fitness Bracelets",
+              "request_link_query": "smartwatch?sw_type[0]=bracelet&sw_type[operation]=union"
+            },
+            {
+              "name": "Heart Rate Monitors",
+              "request_link_query": "heart_rate?hr_type[0]=heartratemon&hr_type[operation]=union"
+            },
+            {
+              "name": "Virtual Reality Glasses",
+              "request_link_query": "virtualreality"
+            },
+            {
+              "name": "Smart Scales",
+              "request_link_query": "scales?type_scales[0]=smart&type_scales[operation]=union"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computers and Networks",
+      "categories": [
+        {
+          "name": "Components",
+          "sub-categories": [
+            {
+              "name": "Video Cards",
+              "request_link_query": "videocards"
+            },
+            {
+              "name": "Processors",
+              "request_link_query": "cpu"
+            },
+            {
+              "name": "RAM",
+              "request_link_query": "dram"
+            },
+            {
+              "name": "Cooling Systems",
+              "request_link_query": "fan"
+            },
+            {
+              "name": "Motherboards",
+              "request_link_query": "motherboards"
+            },
+            {
+              "name": "SSD",
+              "request_link_query": "ssd"
+            },
+            {
+              "name": "Power Supplies",
+              "request_link_query": "powersupply"
+            },
+            {
+              "name": "Network Adapters",
+              "request_link_query": "networkadapter"
+            }
+          ]
+        },
+        {
+          "name": "Data Storage",
+          "sub-categories": [
+            {
+              "name": "SSD",
+              "request_link_query": "ssd"
+            },
+            {
+              "name": "USB Flash Drives",
+              "request_link_query": "usbflash"
+            },
+            {
+              "name": "Hard Drives",
+              "request_link_query": "hdd"
+            },
+            {
+              "name": "Memory Cards",
+              "request_link_query": "memcards"
+            },
+            {
+              "name": "External Storage (HDD and SSD)",
+              "request_link_query": "externalhdd"
+            },
+            {
+              "name": "Storage Boxes",
+              "request_link_query": "hddbox"
+            },
+            {
+              "name": "Optical Drives",
+              "request_link_query": "optical"
+            },
+            {
+              "name": "Mining Accessories",
+              "request_link_query": "mining_acs"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
