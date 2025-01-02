@@ -37,9 +37,9 @@ Before you can run the bot, ensure you have the following:
 
 ### 1. Clone the Repository
 
-bash
-git clone <repository-url>
-cd <project-directory>
+    bash
+    git clone <repository-url>
+    cd <project-directory>
 
 ### 2. Set Up Your Bot in Telegram
 
