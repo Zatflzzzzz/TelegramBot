@@ -11,7 +11,6 @@ This is my first project written in **Java**, using the **Spring Framework**. Th
 - **Telegram Bot API**: To integrate with Telegram and create a bot.
 - **Maven**: For dependency management and project build.
 - **Lombok**: To reduce boilerplate code.
-- **SLF4J**: For logging functionality.
 - **Docker** (optional): To containerize the application for deployment.
 
 ---
