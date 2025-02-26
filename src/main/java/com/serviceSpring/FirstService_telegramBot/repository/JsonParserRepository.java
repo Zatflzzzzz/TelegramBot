@@ -5,6 +5,7 @@ import com.serviceSpring.FirstService_telegramBot.models.Catalog;
 import com.serviceSpring.FirstService_telegramBot.models.CatalogWrapper;
 import com.serviceSpring.FirstService_telegramBot.models.Category;
 import com.serviceSpring.FirstService_telegramBot.models.SubCategory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
@@ -14,13 +15,16 @@ import java.util.List;
 @Repository
 public class JsonParserRepository {
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private final static String FILE_NAME = "src/main/resources/OnlinerData.json";
+
+    // Используем переменную окружения для указания пути к файлу
+    @Value("${onliner.data.file.path}")
+    private String filePath;
 
     private CatalogWrapper readCatalogFromFile() throws IOException {
-        File file = new File(JsonParserRepository.FILE_NAME);
+        File file = new File(filePath);
 
         if (!file.exists()) {
-            System.out.println("File not found: " + JsonParserRepository.FILE_NAME);
+            System.out.println("File not found: " + filePath);
             return null;
         }
 
@@ -42,8 +46,8 @@ public class JsonParserRepository {
         CatalogWrapper catalogWrapper = getCatalogWrapper();
         List<Catalog> catalogs = catalogWrapper.getCatalogs();
 
-        for(Catalog catalog : catalogs){
-            if(catalog.getName().equalsIgnoreCase(nameOfCatalog)){
+        for (Catalog catalog : catalogs) {
+            if (catalog.getName().equalsIgnoreCase(nameOfCatalog)) {
                 return catalog;
             }
         }
@@ -54,8 +58,8 @@ public class JsonParserRepository {
     public Category getDirectoryByName(String nameOfCatalog, String nameOfDirectory) throws IOException {
         Catalog catalogs = getCatalogByName(nameOfCatalog);
 
-        for(Category category : catalogs.getCategories()){
-            if(category.getName().equalsIgnoreCase(nameOfDirectory)){
+        for (Category category : catalogs.getCategories()) {
+            if (category.getName().equalsIgnoreCase(nameOfDirectory)) {
                 return category;
             }
         }
@@ -63,11 +67,11 @@ public class JsonParserRepository {
         return null;
     }
 
-    public SubCategory getSubCategory(String nameOfCatalog, String nameOfDirectory,String nameOfSubCategory) throws IOException {
+    public SubCategory getSubCategory(String nameOfCatalog, String nameOfDirectory, String nameOfSubCategory) throws IOException {
         Category category = getDirectoryByName(nameOfCatalog, nameOfDirectory);
 
-        for(SubCategory subCategory : category.getSubCategories()){
-            if(subCategory.getName().equalsIgnoreCase(nameOfSubCategory)){
+        for (SubCategory subCategory : category.getSubCategories()) {
+            if (subCategory.getName().equalsIgnoreCase(nameOfSubCategory)) {
                 return subCategory;
             }
         }

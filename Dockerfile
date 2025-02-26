@@ -1,9 +1,18 @@
-FROM maven:3.8.6-openjdk-17 AS build
+
+FROM openjdk:22-ea-jdk-slim AS build
+RUN apt-get update && apt-get install -y maven
+
 WORKDIR /app
-COPY . .
+COPY pom.xml .
+COPY src ./src
+
 RUN mvn clean package -DskipTests
 
-FROM openjdk:17-jdk
-WORKDIR /app
-COPY --from=build /app/target/FirstService_telegramBot-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+FROM openjdk:22-ea-jdk-slim
+
+COPY --from=build /app/target/*.jar app.jar
+COPY src/main/resources/OnlinerData.json /app/OnlinerData.json
+
+ENV onliner.data.file.path=/app/OnlinerData.json
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

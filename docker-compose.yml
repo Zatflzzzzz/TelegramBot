@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram_bot_app
+    restart: unless-stopped
