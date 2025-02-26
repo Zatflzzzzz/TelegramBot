@@ -1,93 +1,99 @@
-# Telegram Bot Helper for Choosing a Device
+# Telegram Bot Helper для выбора устройства
 
-This is my first project written in **Java**, using the **Spring Framework**. The project implements a Telegram bot that helps users choose devices based on their preferences or requirements.
-
----
-
-## Technologies Used
-
-- **Java**: Core programming language.
-- **Spring Boot**: Framework for building the application.
-- **Telegram Bot API**: To integrate with Telegram and create a bot.
-- **Maven**: For dependency management and project build.
-- **Lombok**: To reduce boilerplate code.
-- **Docker** (optional): To containerize the application for deployment.
+Это мой первый проект, написанный на **Java** с использованием **Spring Framework**. Проект представляет собой Telegram-бота, который помогает пользователям выбирать устройства на основе их предпочтений или требований.
 
 ---
 
-## Features
+## Используемые технологии
 
-- **Device Selection Assistance**: The bot interacts with users to help them select a device (e.g., a smartphone, laptop, etc.) based on specified criteria.
-- **User-Friendly**: Simple and easy-to-use interface via Telegram.
-
----
-
-## Prerequisites
-
-Before you can run the bot, ensure you have the following:
-
-1. **Java Development Kit (JDK)**: Make sure you have JDK 17 or higher installed.
-2. **Spring Framework**: The project uses Spring Boot for simplicity and scalability.
-3. **Telegram Bot Token**: You'll need a token for your bot, which you can obtain by creating a bot in Telegram.
+- **Java**: Основной язык программирования.
+- **Spring Boot**: Фреймворк для создания приложения.
+- **Telegram Bot API**: Для интеграции с Telegram и создания бота.
+- **Maven**: Для управления зависимостями и сборки проекта.
+- **Lombok**: Для сокращения шаблонного кода.
+- **Docker** (опционально): Для контейнеризации приложения и его развертывания.
 
 ---
 
-## Getting Started
+## Возможности
 
-### 1. Clone the Repository
+- **Помощь в выборе устройства**: Бот взаимодействует с пользователями, чтобы помочь им выбрать устройство (например, смартфон, ноутбук и т.д.) на основе указанных критериев.
+- **Удобный интерфейс**: Простой и понятный интерфейс через Telegram.
+
+---
+
+## Необходимые условия
+
+Перед запуском бота убедитесь, что у вас установлено следующее:
+
+1. **Java Development Kit (JDK)**: Убедитесь, что у вас установлен JDK 17 или выше.
+2. **Spring Framework**: Проект использует Spring Boot для простоты и масштабируемости.
+3. **Токен Telegram-бота**: Вам понадобится токен для вашего бота, который можно получить, создав бота в Telegram.
+
+---
+
+## Начало работы
+
+### 1. Клонирование репозитория
 
     bash
     git clone <repository-url>
     cd <project-directory>
 
-### 2. Set Up Your Bot in Telegram
+## 2. Создание бота в Telegram
 
-#### If you don’t have a bot yet, follow these steps to create one:
+Если у вас еще нет бота, выполните следующие шаги для его создания:
 
-    Open Telegram and search for BotFather.
-    Start a chat with the BotFather by clicking the "Start" button.
-    Use the /newbot command to create a new bot.
-    Follow the instructions to provide:
-        A name for your bot (e.g., DeviceHelperBot).
-        A unique username ending with bot (e.g., DeviceHelperBot).
-    Once created, BotFather will send you a token. Save this token, as you'll need it to configure your bot.
+1. Откройте Telegram и найдите **BotFather**.
+2. Начните чат с **BotFather**, нажав кнопку **"Start"**.
+3. Используйте команду `/newbot` для создания нового бота.
+4. Следуйте инструкциям, чтобы указать:
+   - Имя вашего бота (например, `DeviceHelperBot`).
+   - Уникальное имя пользователя, оканчивающееся на `bot` (например, `DeviceHelperBot`).
+5. После создания **BotFather** отправит вам токен. Сохраните этот токен, так как он понадобится для настройки вашего бота.
 
-### 3. Configure the Application
+---
 
-    To run the bot, you need to provide the following fields in the application.properties file (or pass them as environment variables):
+## 3. Настройка приложения
+
+Для запуска бота необходимо указать следующие поля в файле `application.properties` (или передать их как переменные окружения):
+
     properties
-    
     bot.name=YourBotUsernameHere
     bot.token=YourTelegramBotTokenHere
-    
-    Replace YourBotUsernameHere and YourTelegramBotTokenHere with the actual values for your bot.
 
-### 4. Build and Run the Project
+## 5. Использование бота
 
-Use the following steps to build and run the application:
+После запуска бота:
 
-    Build the project:
-    bash
+1. Откройте Telegram и найдите вашего бота по его имени пользователя.
+2. Начните диалог, нажав кнопку **"Start"**.
+3. Следуйте инструкциям бота, чтобы получить рекомендации по устройствам.
 
-    ./mvnw clean package
+---
 
-Run the application:
+## Запуск через Docker-Compose
 
-    bash
+Для удобства развертывания приложения можно использовать Docker и Docker-Compose. Ниже приведена инструкция по запуску проекта с помощью Docker-Compose.
 
-    java -jar target/<your-jar-file>.jar
+### 1. Установите Docker и Docker-Compose
 
-How to Use the Bot
+Убедитесь, что у вас установлены Docker и Docker-Compose. Если они не установлены, следуйте официальной документации для их установки.
 
-Once the bot is up and running:
+### 2. Запуск приложения с помощью Docker-Compose
 
-    Open Telegram and find your bot using its username.
-    Start a conversation by clicking the "Start" button.
-    Follow the bot's instructions to get device recommendations.
+Выполните следующую команду для запуска приложения:
 
-Contributing
+```
+   docker-compose up --build
+```
 
-Contributions are welcome! If you'd like to improve this bot or add features, feel free to fork the repository and submit a pull request.
+Приложение будет запущено в контейнере Docker, и бот начнет работать.
 
-### Contact
-[https://t.me/](https://t.me/zatflz)
+### Часть информации для этого проекта была взята с сайта Onliner.
+
+### Дополнительная информация
+
+    Поддержка: Если у вас возникли проблемы с запуском бота, пожалуйста, создайте issue в репозитории.
+
+    Лицензия: Этот проект распространяется под лицензией MIT. Подробности можно найти в файле LICENSE.
