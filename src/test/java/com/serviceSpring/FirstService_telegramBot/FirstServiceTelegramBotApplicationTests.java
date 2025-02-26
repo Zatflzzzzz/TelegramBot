@@ -8,8 +8,4 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("test")
 class FirstServiceTelegramBotApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
 }
